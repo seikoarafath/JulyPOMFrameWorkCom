@@ -43,7 +43,7 @@ public WebDriver init_driver(Properties prop) {
 	
 	driver.manage().deleteAllCookies();
 	driver.manage().window().maximize();
-	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+	//driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	driver.get(prop.getProperty("url"));
 	
 	return driver;

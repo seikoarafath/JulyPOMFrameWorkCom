@@ -4,10 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.para.base.BasePage;
+import com.qa.para.utils.Constants;
+import com.qa.para.utils.ElementUtil;
 
 public class HomePage extends BasePage  {
 	
 	private WebDriver driver;
+	private ElementUtil elementutil;
 	
 	//By locators..
 	
@@ -18,20 +21,21 @@ public class HomePage extends BasePage  {
 
 	public HomePage(WebDriver driver){
 		this.driver=driver;
+		elementutil=new ElementUtil(driver);
 	}
 
 	// page actions 
 	
 	public String getHomePageTitle(){
-		return driver.getTitle();
+		return elementutil.waitForTitleToBePresent(Constants.HOME_PAGE_TITLE, 10);
 		}
 	
 	public String getAccountNumber(){
-		return driver.findElement(accountnumber).getText();
+		return elementutil.doGetText(accountnumber);
 	}
 	
 	public boolean getRequestLoanLink() {
-	return	driver.findElement(requestloan).isDisplayed();
+	return	elementutil.doIsDisplayed(requestloan);
 	}
 
 }

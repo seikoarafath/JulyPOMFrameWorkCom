@@ -4,10 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.para.base.BasePage;
+import com.qa.para.utils.Constants;
+import com.qa.para.utils.ElementUtil;
 
 public class LoginPage extends BasePage {
 	
 private WebDriver driver;
+private ElementUtil elementutil;
 	
 //By locators..
 	
@@ -20,23 +23,24 @@ By forgotpwdLink=By.linkText("Forgot login info?");
 
 public LoginPage(WebDriver driver){
 	this.driver=driver;
+	elementutil=new ElementUtil(driver);
 }
 
 // page actions 
 
 public String getLoginPageTitle(){
-	return driver.getTitle();
+return elementutil.waitForTitleToBePresent(Constants.LOGIN_PAGE_TITLE, 10);
 }
 
 public boolean getForgotPWDLink(){
-	return driver.findElement(forgotpwdLink).isDisplayed();
+return elementutil.doIsDisplayed(forgotpwdLink);
 }
  
 public HomePage doLogin(String username,String password) {
-	driver.findElement(this.username).sendKeys(username);
-	driver.findElement(this.password).sendKeys(password);
-	driver.findElement(this.loginbutton).click(); 
-	
+elementutil.waitForElementToBeVisible(this.username, 10);
+elementutil.doSendKeys(this.username, username);
+elementutil.doSendKeys(this.password, password);
+elementutil.doActionsClick(loginbutton);
 	return new HomePage(driver);
 	
 }
