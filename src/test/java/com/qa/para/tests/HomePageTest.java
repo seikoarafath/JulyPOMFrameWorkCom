@@ -1,37 +1,21 @@
 package com.qa.para.tests;
 
-import java.util.Properties;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.qa.para.base.BasePage;
+import com.qa.para.base.BaseTest;
 import com.qa.para.pages.HomePage;
-import com.qa.para.pages.LoginPage;
 import com.qa.para.utils.Constants;
 
-public class HomePageTest {
+public class HomePageTest extends BaseTest {
 	
-WebDriver driver;
-	
-	BasePage basepage;
-	LoginPage loginpage;
 	HomePage homepage;
-	Properties prop;
 	
-	
-	
-	@BeforeTest
-	public void setUp(){
-	basepage=new BasePage();
-	prop=basepage.init_prop();
-	driver=basepage.init_driver(prop);
-	loginpage=new LoginPage(driver);
+	@BeforeClass
+	public void homeSetUp() {
 	homepage=loginpage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
-	}
+	};
 	
 	
 	@Test(priority=2)
@@ -51,10 +35,7 @@ WebDriver driver;
 		Assert.assertTrue(homepage.getRequestLoanLink());
 		}
 	
-     @AfterTest
-   public void tearDown(){
-	   driver.quit();
-	   }
+  
 	
 	
 	

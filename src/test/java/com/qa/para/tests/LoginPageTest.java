@@ -1,33 +1,15 @@
 package com.qa.para.tests;
-
-import java.util.Properties;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
-import com.qa.para.base.BasePage;
-import com.qa.para.pages.LoginPage;
+
+import com.qa.para.base.BaseTest;
+
 import com.qa.para.utils.Constants;
 
-public class LoginPageTest {
-	WebDriver driver;
-	
-	BasePage basepage;
-	LoginPage loginpage;
-	Properties prop;
-	
-	
-	
-	@BeforeTest
-	public void setUp(){
-	basepage=new BasePage();
-	prop=basepage.init_prop();
-    driver=basepage.init_driver(prop);
-	loginpage=new LoginPage(driver);
-		}
+public class LoginPageTest extends BaseTest{
+
 	
 	@Test(priority=2)
 	public void verifyLoginpageTitleTest(){
@@ -46,10 +28,6 @@ public class LoginPageTest {
 	
 
 
-   @AfterTest
-   public void tearDown(){
-	   driver.quit();
-	   }
 
 
 
