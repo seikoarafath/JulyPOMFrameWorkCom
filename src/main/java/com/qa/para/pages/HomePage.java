@@ -16,6 +16,7 @@ public class HomePage extends BasePage  {
 	
 	By accountnumber=By.linkText("18561");
 	By requestloan=By.linkText("Request Loan");
+    By billpay=By.linkText("Bill Pay");
 		
 	//create constructor 
 
@@ -38,4 +39,9 @@ public class HomePage extends BasePage  {
 	return	elementutil.doIsDisplayed(requestloan);
 	}
 
+	public ContactsPage goToContactsPage() {
+		elementutil.waitForElementPresent(billpay, 5);
+		elementutil.doActionsClick(billpay);
+		return new ContactsPage(driver);
+	}
 }

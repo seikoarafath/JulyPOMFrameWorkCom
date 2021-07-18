@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Hub_spot_Test_automtion_regression_suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,22 @@
                     <div class="method-list-content passed suite-Hub_spot_Test_automtion_regression_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hub_spot_Test_automtion_regression_suite" title="com.qa.para.tests.ContactsPageTest" class="method navigator-link" hash-for-method="billpayment">billpayment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Hub_spot_Test_automtion_regression_suite" title="com.qa.para.tests.LoginPageTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hub_spot_Test_automtion_regression_suite" title="com.qa.para.tests.ContactsPageTest" class="method navigator-link" hash-for-method="verifyConfirmation">verifyConfirmation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hub_spot_Test_automtion_regression_suite" title="com.qa.para.tests.ContactsPageTest" class="method navigator-link" hash-for-method="verifyContactsPageTitleTest">verifyContactsPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -188,6 +203,35 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Hub_spot_Test_automtion_regression_suite-class-passed -->
+          <div class="suite-Hub_spot_Test_automtion_regression_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.para.tests.ContactsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="billpayment">
+                  </a> <!-- billpayment -->
+                  <span class="method-name">billpayment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyConfirmation">
+                  </a> <!-- verifyConfirmation -->
+                  <span class="method-name">verifyConfirmation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyContactsPageTitleTest">
+                  </a> <!-- verifyContactsPageTitleTest -->
+                  <span class="method-name">verifyContactsPageTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hub_spot_Test_automtion_regression_suite-class-passed -->
         </div> <!-- panel Hub_spot_Test_automtion_regression_suite -->
         <div panel-name="test-xml-Hub_spot_Test_automtion_regression_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -210,6 +254,12 @@
       &lt;class name=&quot;com.qa.para.tests.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- home page test --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;contacts page test&quot; verbose=&quot;3&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.para.tests.ContactsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- contacts page test --&gt;
 &lt;/suite&gt; &lt;!-- Hub spot Test automtion regression suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,6 +275,9 @@
               </li>
               <li>
                 <span class="test-name">home page test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">contacts page test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -250,32 +303,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.qa.para.tests.LoginPageTest')
-data.setCell(0, 3, 1001);
+data.setCell(0, 3, 1211);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyForgotPWDLinkTest')
-data.setCell(1, 2, 'com.qa.para.tests.LoginPageTest')
-data.setCell(1, 3, 100);
+data.setCell(1, 1, 'billpayment')
+data.setCell(1, 2, 'com.qa.para.tests.ContactsPageTest')
+data.setCell(1, 3, 1195);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyrequestloanlink')
 data.setCell(2, 2, 'com.qa.para.tests.HomePageTest')
-data.setCell(2, 3, 50);
+data.setCell(2, 3, 194);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyLoginpageTitleTest')
 data.setCell(3, 2, 'com.qa.para.tests.LoginPageTest')
-data.setCell(3, 3, 22);
+data.setCell(3, 3, 131);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyHomepageTitleTest')
-data.setCell(4, 2, 'com.qa.para.tests.HomePageTest')
-data.setCell(4, 3, 13);
+data.setCell(4, 1, 'verifyForgotPWDLinkTest')
+data.setCell(4, 2, 'com.qa.para.tests.LoginPageTest')
+data.setCell(4, 3, 114);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyConfirmation')
+data.setCell(5, 2, 'com.qa.para.tests.ContactsPageTest')
+data.setCell(5, 3, 73);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyHomepageTitleTest')
+data.setCell(6, 2, 'com.qa.para.tests.HomePageTest')
+data.setCell(6, 3, 56);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyContactsPageTitleTest')
+data.setCell(7, 2, 'com.qa.para.tests.ContactsPageTest')
+data.setCell(7, 3, 18);
 window.suiteTableData['Hub_spot_Test_automtion_regression_suite']= { tableData: data, tableDiv: 'times-div-Hub_spot_Test_automtion_regression_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Hub_spot_Test_automtion_regression_suite">
               </div> <!-- times-div-Hub_spot_Test_automtion_regression_suite -->
             </div> <!-- times-div -->
@@ -308,58 +373,109 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">3 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">verifyForgotPWDLinkTest</span>
-                <span class="method-start">5072 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginpageTitleTest</span>
-                <span class="method-start">5175 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">5199 ms</span>
-              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.ContactsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">4 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">ContactsPageSetUp</span>
+                <span class="method-start">5431 ms</span>
+              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">homeSetUp</span>
-                <span class="method-start">5297 ms</span>
+                <span class="method-start">5756 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">6202 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">verifyForgotPWDLinkTest</span>
+                <span class="method-start">7203 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyHomepageTitleTest</span>
-                <span class="method-start">6793 ms</span>
+                <span class="method-start">7261 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginpageTitleTest</span>
+                <span class="method-start">7320 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyrequestloanlink</span>
-                <span class="method-start">6807 ms</span>
+                <span class="method-start">7320 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.ContactsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyContactsPageTitleTest</span>
+                <span class="method-start">7405 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">billpayment</span>
+                <span class="method-start">7424 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest</span>
+                <span class="method-start">7453 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6858 ms</span>
+                <span class="method-start">7516 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.ContactsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyConfirmation</span>
+                <span class="method-start">8620 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">8667 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.para.tests.ContactsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">8694 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

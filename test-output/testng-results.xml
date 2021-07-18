@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+<testng-results ignored="1" total="9" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-16T04:34:52Z" name="Hub spot Test automtion regression suite" finished-at="2021-07-16T04:35:00Z" duration-ms="7566">
+  <suite started-at="2021-07-18T02:42:14Z" name="Hub spot Test automtion regression suite" finished-at="2021-07-18T02:42:24Z" duration-ms="9394">
     <groups>
     </groups>
-    <test started-at="2021-07-16T04:34:52Z" name="login page test" finished-at="2021-07-16T04:35:00Z" duration-ms="7069">
-      <class name="com.qa.para.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-16T04:34:52Z" name="setUp" finished-at="2021-07-16T04:34:58Z" duration-ms="5052" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyForgotPWDLinkTest()[pri:1, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-16T04:34:58Z" name="verifyForgotPWDLinkTest" finished-at="2021-07-16T04:34:58Z" duration-ms="100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyForgotPWDLinkTest -->
-        <test-method signature="verifyLoginpageTitleTest()[pri:2, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-16T04:34:58Z" name="verifyLoginpageTitleTest" finished-at="2021-07-16T04:34:58Z" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginpageTitleTest -->
-        <test-method signature="loginTest()[pri:3, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-16T04:34:58Z" name="loginTest" finished-at="2021-07-16T04:34:59Z" duration-ms="1001" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-16T04:34:59Z" name="tearDown" finished-at="2021-07-16T04:35:00Z" duration-ms="864" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.para.tests.LoginPageTest -->
-    </test> <!-- login page test -->
-    <test started-at="2021-07-16T04:34:52Z" name="home page test" finished-at="2021-07-16T04:35:00Z" duration-ms="7566">
+    <test started-at="2021-07-18T02:42:14Z" name="home page test" finished-at="2021-07-18T02:42:23Z" duration-ms="8904">
       <class name="com.qa.para.tests.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-16T04:34:52Z" name="setUp" finished-at="2021-07-16T04:34:58Z" duration-ms="5297" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-18T02:42:14Z" name="setUp" finished-at="2021-07-18T02:42:20Z" duration-ms="5753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="homeSetUp()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-16T04:34:58Z" name="homeSetUp" finished-at="2021-07-16T04:34:59Z" duration-ms="1496" status="PASS">
+        <test-method is-config="true" signature="homeSetUp()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-18T02:42:20Z" name="homeSetUp" finished-at="2021-07-18T02:42:21Z" duration-ms="1505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeSetUp -->
-        <test-method signature="verifyHomepageTitleTest()[pri:2, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-16T04:34:59Z" name="verifyHomepageTitleTest" finished-at="2021-07-16T04:34:59Z" duration-ms="13" status="PASS">
+        <test-method signature="verifyHomepageTitleTest()[pri:2, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-18T02:42:21Z" name="verifyHomepageTitleTest" finished-at="2021-07-18T02:42:21Z" duration-ms="56" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepageTitleTest -->
-        <test-method signature="verifyrequestloanlink()[pri:3, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-16T04:34:59Z" name="verifyrequestloanlink" finished-at="2021-07-16T04:34:59Z" duration-ms="50" status="PASS">
+        <test-method signature="verifyrequestloanlink()[pri:3, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-18T02:42:22Z" name="verifyrequestloanlink" finished-at="2021-07-18T02:42:22Z" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyrequestloanlink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-16T04:34:59Z" name="tearDown" finished-at="2021-07-16T04:35:00Z" duration-ms="705" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.para.tests.HomePageTest@36d585c]" started-at="2021-07-18T02:42:22Z" name="tearDown" finished-at="2021-07-18T02:42:23Z" duration-ms="1385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.para.tests.HomePageTest -->
     </test> <!-- home page test -->
+    <test started-at="2021-07-18T02:42:14Z" name="login page test" finished-at="2021-07-18T02:42:24Z" duration-ms="9394">
+      <class name="com.qa.para.tests.LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-18T02:42:14Z" name="setUp" finished-at="2021-07-18T02:42:21Z" duration-ms="7193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyForgotPWDLinkTest()[pri:1, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-18T02:42:21Z" name="verifyForgotPWDLinkTest" finished-at="2021-07-18T02:42:21Z" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPWDLinkTest -->
+        <test-method signature="verifyLoginpageTitleTest()[pri:2, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-18T02:42:22Z" name="verifyLoginpageTitleTest" finished-at="2021-07-18T02:42:22Z" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginpageTitleTest -->
+        <test-method signature="loginTest()[pri:3, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-18T02:42:22Z" name="loginTest" finished-at="2021-07-18T02:42:23Z" duration-ms="1211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.para.tests.LoginPageTest@3098cf3b]" started-at="2021-07-18T02:42:23Z" name="tearDown" finished-at="2021-07-18T02:42:24Z" duration-ms="724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.para.tests.LoginPageTest -->
+    </test> <!-- login page test -->
+    <test started-at="2021-07-18T02:42:14Z" name="contacts page test" finished-at="2021-07-18T02:42:24Z" duration-ms="9394">
+      <class name="com.qa.para.tests.ContactsPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:14Z" name="setUp" finished-at="2021-07-18T02:42:20Z" duration-ms="5420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="ContactsPageSetUp()[pri:0, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:20Z" name="ContactsPageSetUp" finished-at="2021-07-18T02:42:22Z" duration-ms="1973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ContactsPageSetUp -->
+        <test-method signature="verifyContactsPageTitleTest()[pri:1, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:22Z" name="verifyContactsPageTitleTest" finished-at="2021-07-18T02:42:22Z" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactsPageTitleTest -->
+        <test-method signature="billpayment()[pri:2, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:22Z" name="billpayment" finished-at="2021-07-18T02:42:23Z" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- billpayment -->
+        <test-method signature="verifyConfirmation()[pri:3, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:23Z" name="verifyConfirmation" finished-at="2021-07-18T02:42:23Z" depends-on-methods="com.qa.para.tests.ContactsPageTest.verifyContactsPageTitleTest" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyConfirmation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.para.tests.ContactsPageTest@1fb700ee]" started-at="2021-07-18T02:42:23Z" name="tearDown" finished-at="2021-07-18T02:42:24Z" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.para.tests.ContactsPageTest -->
+    </test> <!-- contacts page test -->
   </suite> <!-- Hub spot Test automtion regression suite -->
 </testng-results>

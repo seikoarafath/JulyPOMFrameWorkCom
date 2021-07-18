@@ -16,6 +16,13 @@
 			<class name="com.qa.para.tests.HomePageTest" />
 		</classes>
 	</test>
+	
+	<test name="contacts page test">
+		<parameter name ="browser" value ="chrome" />
+		<classes>
+			<class name="com.qa.para.tests.ContactsPageTest" />
+		</classes>
+	</test>
 
 
 </suite>
