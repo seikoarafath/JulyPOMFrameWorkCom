@@ -27,7 +27,7 @@ public class ContactsPageTest extends BaseTest {
 
 	@Test(priority = 2)
 	public void billpayment() {
-		contactsPage.doBillPayment("seiko", "577elgin", "winnipeg", "manitoba", "12500", "6473036588", "13647", "150", "19782");
+		contactsPage.doBillPayment("seiko", "577elgin", "winnipeg", "manitoba", "12500", "6473036588", "13647", "150", "23112");
 	}
 	@Test(priority=3 ,dependsOnMethods={"verifyContactsPageTitleTest"})
 	

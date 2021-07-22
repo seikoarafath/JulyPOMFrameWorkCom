@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BasePage {
 	
 	WebDriver driver;
-	Properties prop;
+	public Properties prop;
 	
 	/**
 	 * this method is used to initialize the wed driver on the bases of browser..
