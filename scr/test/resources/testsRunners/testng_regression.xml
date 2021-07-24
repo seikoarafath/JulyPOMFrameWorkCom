@@ -3,6 +3,12 @@
 
 <suite name="Hub spot Test automtion regression suite" verbose="3" thread-count="3" parallel="tests">
 
+<listeners>
+<listener class-name="com.qa.para.listeners.ExtentReportListener"/> 
+</listeners>
+
+
+
 	<test name="login page test">
 		<parameter name ="browser" value ="chrome" />
 		<classes>
