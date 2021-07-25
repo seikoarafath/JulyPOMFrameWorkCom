@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 
@@ -12,7 +14,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.qa.para.utils.ElementUtil;
@@ -42,20 +47,39 @@ public class BasePage {
 	
 public WebDriver init_driver(Properties prop) {
 	
-	optionsmanager=new OptionsManager(prop);
-	String browsername=prop.getProperty("browser");
-	
-	if(browsername.equalsIgnoreCase("chrome")) {
+	String browserName = null;
+	if (System.getProperty("browser") == null) {
+		browserName = prop.getProperty("browser");
+	} else {
+		browserName = System.getProperty("browser");
+	}
+
+	System.out.println("Running on --->" + browserName + " browser");
+
+	optionsmanager = new OptionsManager(prop);
+
+	if (browserName.equalsIgnoreCase("chrome")) {
 		WebDriverManager.chromedriver().setup();
-	    tlDriver.set(new ChromeDriver(optionsmanager.getChromeOptions()));
-	}
-	else if(browsername.equalsIgnoreCase("firefox")) {
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			init_remoteWebDriver(browserName);
+		}
+		else {
+			tlDriver.set(new ChromeDriver(optionsmanager.getChromeOptions()));
+		}
+
+	} else if (browserName.equalsIgnoreCase("firefox")) {
 		WebDriverManager.firefoxdriver().setup();
-		tlDriver.set(new FirefoxDriver(optionsmanager.getFirefoxOptions()));
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			init_remoteWebDriver(browserName);
+		}
+		else {
+			tlDriver.set(new FirefoxDriver(optionsmanager.getFirefoxOptions()));
+			
+		}
 	}
-	else if(browsername.equalsIgnoreCase("safari")) {
-		WebDriverManager.getInstance(SafariDriver.class).setup();;
-		driver=new SafariDriver();
+	else if (browserName.equalsIgnoreCase("safari")) {
+		WebDriverManager.getInstance(SafariDriver.class).setup();
+		tlDriver.set(new SafariDriver());
 	}
 	
 	getDriver().manage().deleteAllCookies();
@@ -67,6 +91,28 @@ public WebDriver init_driver(Properties prop) {
 	
 }	
 
+private void init_remoteWebDriver(String browserName) {
+	if (browserName.equalsIgnoreCase("chrome")) {
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setCapability(ChromeOptions.CAPABILITY, optionsmanager.getChromeOptions());
+		try {
+			tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), cap));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	else if (browserName.equalsIgnoreCase("firefox")) {
+		DesiredCapabilities cap = DesiredCapabilities.firefox();
+		cap.setCapability(ChromeOptions.CAPABILITY, optionsmanager.getFirefoxOptions());
+		try {
+			tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), cap));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
 
 /**
  * this method is to initialize properties file from on the bases of env variable..
