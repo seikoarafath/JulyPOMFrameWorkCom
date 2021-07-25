@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.para.tests.ContactsPageTest">
+      <class name="com.qa.para.tests.LoginPageTest">
         <methods>
-          <include name="verifyConfirmation"/>
+          <include name="verifyForgotPWDLinkTest"/>
           <include name="setUp"/>
-          <include name="billpayment"/>
-          <include name="ContactsPageSetUp"/>
-          <include name="verifyContactsPageTitleTest"/>
+          <include name="verifyLoginpageTitleTest"/>
           <include name="tearDown"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.qa.para.tests.ContactsPageTest -->
+      </class> <!-- com.qa.para.tests.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

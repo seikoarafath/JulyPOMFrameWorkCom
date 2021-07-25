@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.qa.para.utils.ElementUtil;
+import com.qa.para.utils.OptionsManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -24,6 +25,7 @@ public class BasePage {
 	WebDriver driver;
 	public Properties prop;
 	public ElementUtil elementutil;
+	public OptionsManager optionsmanager;
 	
 	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>(); 
 	
@@ -40,17 +42,16 @@ public class BasePage {
 	
 public WebDriver init_driver(Properties prop) {
 	
+	optionsmanager=new OptionsManager(prop);
 	String browsername=prop.getProperty("browser");
 	
 	if(browsername.equalsIgnoreCase("chrome")) {
 		WebDriverManager.chromedriver().setup();
-		//driver=new ChromeDriver();
-		tlDriver.set(new ChromeDriver());
+	    tlDriver.set(new ChromeDriver(optionsmanager.getChromeOptions()));
 	}
 	else if(browsername.equalsIgnoreCase("firefox")) {
 		WebDriverManager.firefoxdriver().setup();
-		//driver=new FirefoxDriver();
-		tlDriver.set(new FirefoxDriver());
+		tlDriver.set(new FirefoxDriver(optionsmanager.getFirefoxOptions()));
 	}
 	else if(browsername.equalsIgnoreCase("safari")) {
 		WebDriverManager.getInstance(SafariDriver.class).setup();;
@@ -68,16 +69,39 @@ public WebDriver init_driver(Properties prop) {
 
 
 /**
- * this method is to initialize properties file from config.properties..
+ * this method is to initialize properties file from on the bases of env variable..
  * @return properties 
  */
 public Properties init_prop() {
-	
 	prop= new Properties();
-	try {
-		FileInputStream ip= new FileInputStream("./src/main/java/com/qa/para/config/config.properties");
-	    prop.load(ip);
+	  String path= null;
+	  String env= null;
+	    
 	
+	try {
+		env=System.getProperty("env");
+		System.out.println("env value is --->" +env);
+		
+		if(env==null) {
+			path="./src/main/java/com/qa/para/config/config.properties";
+		}else {
+		switch (env) {
+		case "qa":
+			path="./src/main/java/com/qa/para/config/qa.config.properties";
+			break;
+		case "dev":
+			path="./src/main/java/com/qa/para/config/dev.config.properties";
+			break;
+		case "stage":
+			path="./src/main/java/com/qa/para/config/stage.config.properties";
+			break;
+        default:
+        	System.out.println("please pass the correct env value----->" +env);
+			break;
+		}	
+	}
+		FileInputStream ip= new FileInputStream(path);
+	    prop.load(ip);
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {

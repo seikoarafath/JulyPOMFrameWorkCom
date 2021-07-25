@@ -7,6 +7,8 @@ import com.qa.para.base.BasePage;
 import com.qa.para.utils.Constants;
 import com.qa.para.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage extends BasePage {
 	
 private WebDriver driver;
@@ -27,15 +29,15 @@ public LoginPage(WebDriver driver){
 }
 
 // page actions 
-
+@Step("get login page title")
 public String getLoginPageTitle(){
 return elementutil.waitForTitleToBePresent(Constants.LOGIN_PAGE_TITLE, 10);
 }
-
+@Step("get forgot password link")
 public boolean getForgotPWDLink(){
 return elementutil.doIsDisplayed(forgotpwdLink);
 }
- 
+@Step("login to the app with the username:{0} and password:{1}") 
 public HomePage doLogin(String username,String password) {
 elementutil.waitForElementToBeVisible(this.username, 10);
 elementutil.doSendKeys(this.username, username);
