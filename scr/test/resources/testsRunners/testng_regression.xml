@@ -4,7 +4,7 @@
 <suite name="Para Bank Test automtion regression suite" verbose="3" thread-count="3" parallel="tests">
 
 <listeners>
-<!--  <listener class-name="com.qa.para.listeners.ExtentReportListener"/> -->
+<listener class-name="com.qa.para.listeners.ExtentReportListener"/>
 <listener class-name="com.qa.para.listeners.TestAllureListener"/> 
 </listeners>
 
