@@ -42,18 +42,25 @@ public class BasePage {
 	
 public WebDriver init_driver(Properties prop) {
 	
+	String browserName=null;
+	if(System.getProperty("browser")==null) {
+		browserName=prop.getProperty("browser");
+	}else {
+		browserName=System.getProperty("browser");
+	}
+	System.out.println("Running on --->"+browserName);
 	optionsmanager=new OptionsManager(prop);
-	String browsername=prop.getProperty("browser");
+	//String browserName=prop.getProperty("browser");
 	
-	if(browsername.equalsIgnoreCase("chrome")) {
+	if(browserName.equalsIgnoreCase("chrome")) {
 		WebDriverManager.chromedriver().setup();
 	    tlDriver.set(new ChromeDriver(optionsmanager.getChromeOptions()));
 	}
-	else if(browsername.equalsIgnoreCase("firefox")) {
+	else if(browserName.equalsIgnoreCase("firefox")) {
 		WebDriverManager.firefoxdriver().setup();
 		tlDriver.set(new FirefoxDriver(optionsmanager.getFirefoxOptions()));
 	}
-	else if(browsername.equalsIgnoreCase("safari")) {
+	else if(browserName.equalsIgnoreCase("safari")) {
 		WebDriverManager.getInstance(SafariDriver.class).setup();;
 		driver=new SafariDriver();
 	}
